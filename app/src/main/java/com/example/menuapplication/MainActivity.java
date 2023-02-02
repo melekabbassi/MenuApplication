@@ -1,5 +1,6 @@
 package com.example.menuapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -32,39 +33,41 @@ public class MainActivity extends AppCompatActivity {
                 int totalAmount = 0;
                 String result = "Selected Items:";
                 if (Pizza.isChecked()) {
-                    result += "\nPizza 12000";
+                    result = result.concat("\nPizza 12000 TND");
                     totalAmount += 12000;
                 }
                 if (Burger.isChecked()) {
-                    result += "\nBurger 10000";
+                    result = result.concat("\nBurger 10000 TND");
                     totalAmount += 10000;
                 }
                 if (Pasta.isChecked()) {
-                    result += "\nPasta 15000";
+                    result = result.concat("\nPasta 15000 TND");
                     totalAmount += 15000;
                 }
                 if (Salad.isChecked()) {
-                    result += "\nSalad 8000";
+                    result = result.concat("\nSalad 8000 TND");
                     totalAmount += 8000;
                 }
                 if (Coke.isChecked()) {
-                    result += "\nCoke 3000";
-                    totalAmount += 3000;
+                    result = result.concat("\nCoke 5000 TND");
+                    totalAmount += 5000;
                 }
                 if (Sprite.isChecked()) {
-                    result += "\nSprite 3000";
-                    totalAmount += 3000;
+                    result = result.concat("\nSprite 5000 TND");
+                    totalAmount += 5000;
                 }
                 if (Water.isChecked()) {
-                    result += "\nWater 2000";
-                    totalAmount += 2000;
+                    result = result.concat("\nWater 3000 TND");
+                    totalAmount += 3000;
                 }
-                result += "\nTotal: " + totalAmount + " TND";
-                // Display the message on the AlertDialog
-                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
+
+                result = result.concat("\nTotal: " + totalAmount + " TND");
+                System.out.println(result);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setCancelable(true);
                 builder.setTitle("Order Summary");
-                builder.setMessage(result.toString());
+                builder.setMessage(result);
                 builder.show();
     }
 });
