@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     CheckBox Pizza, Burger, Pasta, Salad, Coke, Sprite, Water;
@@ -31,39 +30,42 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int totalAmount = 0;
-                StringBuilder result = new StringBuilder();
-                result.append("Selected Items:");
+                String result = "Selected Items:";
                 if (Pizza.isChecked()) {
-                    result.append("\nPizza 12000 TND");
+                    result += "\nPizza 12000";
                     totalAmount += 12000;
                 }
                 if (Burger.isChecked()) {
-                    result.append("\nBurger 8000 TND");
-                    totalAmount += 8000;
-                }
-                if (Pasta.isChecked()) {
-                    result.append("\nPasta 10000 TND");
+                    result += "\nBurger 10000";
                     totalAmount += 10000;
                 }
+                if (Pasta.isChecked()) {
+                    result += "\nPasta 15000";
+                    totalAmount += 15000;
+                }
                 if (Salad.isChecked()) {
-                    result.append("\nSalad 5000 TND");
-                    totalAmount += 5000;
+                    result += "\nSalad 8000";
+                    totalAmount += 8000;
                 }
                 if (Coke.isChecked()) {
-                    result.append("\nCoke 2000 TND");
-                    totalAmount += 2000;
+                    result += "\nCoke 3000";
+                    totalAmount += 3000;
                 }
                 if (Sprite.isChecked()) {
-                    result.append("\nSprite 2000 TND");
-                    totalAmount += 2000;
+                    result += "\nSprite 3000";
+                    totalAmount += 3000;
                 }
                 if (Water.isChecked()) {
-                    result.append("\nWater 1000 TND");
-                    totalAmount += 1000;
+                    result += "\nWater 2000";
+                    totalAmount += 2000;
                 }
-                result.append("\nTotal: " + totalAmount + " TND");
-                // Display the message on the toast
-                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();
+                result += "\nTotal: " + totalAmount + " TND";
+                // Display the message on the AlertDialog
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Order Summary");
+                builder.setMessage(result.toString());
+                builder.show();
     }
 });
     }
