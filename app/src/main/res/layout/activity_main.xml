@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/CheckBoxPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Pizza"
+        android:layout_marginTop="40dp"/>
+
+    <CheckBox
+        android:id="@+id/CheckBoxBurger"
+        android:text="@string/Burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxPizza"/>
+
+    <CheckBox
+        android:id="@+id/CheckBoxPasta"
+        android:text="@string/Pasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxBurger"/>
+
+    <CheckBox
+        android:id="@+id/CheckBoxSalad"
+        android:text="@string/Salad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxPasta"/>
+
+    <CheckBox
+        android:id="@+id/CheckBoxCoke"
+        android:text="@string/Coke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxSalad"/>
+
+    <CheckBox
+        android:id="@+id/CheckBoxSprite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sprite"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxCoke"/>
+
+    <CheckBox
+        android:id="@+id/CheckBoxWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Water"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxSprite"/>
+
+    <Button
+        android:id="@+id/ButtonOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Order"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/CheckBoxWater"
+        android:layout_centerHorizontal="true" />
+    <!--    android:layout_toRightOf="@+id/CheckBoxWater"  to the right end of water   -->
+
+
+</RelativeLayout>

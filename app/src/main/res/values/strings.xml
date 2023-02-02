@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MenuApplication</string>
+    <string name="Pizza">Pizza 12000 TND</string>
+    <string name="Burger">Burger 8000 TND</string>
+    <string name="Pasta">Pasta 10000 TND</string>
+    <string name="Salad">Salad 5000 TND</string>
+    <string name="Coke">Coke 2000 TND</string>
+    <string name="Sprite">Sprite 2000 TND</string>
+    <string name="Water">Water 1000 TND</string>
+    <string name="Order">Order</string>
+</resources>
